@@ -1,0 +1,22 @@
+.Next {
+  width: 100%;
+  height: 168px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: radial-gradient(
+    50% 100%,
+    70% 30%,
+    rgb(247, 139,31) 0%,
+    rgb(0, 0, 0) 70%
+  );
+
+  &-Text {
+    color: #fff;
+  }
+
+  &-Icon {
+    background-image: url('/public/assets/next.svg');
+  }
+}

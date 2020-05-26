@@ -1,0 +1,18 @@
+.Slider {
+  background-color: rgb(209, 234, 255);
+  width: 100%;
+  height: 24px;
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    background-image: url('/public/assets/slider-thumb.svg');
+    cursor: pointer;
+  }
+
+  &::-moz-range-thumb {
+    background-image: url('/public/assets/slider-thumb.svg');
+    border: 0;
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,12 @@
+.Navigation {
+  &-Item {
+    width: 27px;
+    height: 26px;
+    border-radius: 100%;
+    margin-bottom: 14px;
+    background-color: #fff;
+    &_selected {
+      background-color: rgb(247, 139, 31);
+    }
+  }
+}

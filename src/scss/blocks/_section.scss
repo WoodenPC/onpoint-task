@@ -1,0 +1,20 @@
+.Section {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  background-repeat: round;
+
+  &_type {
+    &_start {
+      background-image: url('/assets/start-bg.png');
+    }
+  
+    &_therapy{
+      background-image: url('/assets/therapy-bg.png');
+    }
+  
+    &_schemes {
+      background-image: url('/assets/schemes-bg.png');
+    }
+  }
+}

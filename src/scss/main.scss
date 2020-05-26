@@ -7,7 +7,6 @@
 }
 
 html {
-  font-size: 62.5%;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -23,3 +22,7 @@ html, body, #root {
 
 ////////////////
 @import 'blocks/page.scss';
+@import 'blocks/description';
+@import 'blocks/slider';
+@import 'blocks/navigation';
+@import 'blocks/section';
