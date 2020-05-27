@@ -1,20 +1,91 @@
 .Section {
   width: 100vw;
   height: 100vh;
+  padding: 20px;
   scroll-snap-align: start;
   background-repeat: round;
+  position: relative;
+}
 
-  &_type {
-    &_start {
-      background-image: url('/assets/start-bg.png');
+.StartSection {
+  background-image: url('/assets/start-bg.png');
+  color: var(--blue-color);
+  &-Title {
+    font-size: 34px;
+    margin-top: 100px;
+    margin-left: 40px;
+  }
+
+  &-LeftPoint {
+    position: absolute;
+    left: 27%;
+    top: 53%;
+
+    &Text {
+      display: block;
+      transform: translate(-40%, -50%);
     }
-  
-    &_therapy{
-      background-image: url('/assets/therapy-bg.png');
+  }
+
+  &-RightPoint {
+    position: absolute;
+    right: 11.5%;
+    top: 64%;
+
+    &Text {
+      display: block;
+      transform: translate(-40%, -20%);
     }
-  
-    &_schemes {
-      background-image: url('/assets/schemes-bg.png');
+  }
+
+  &-TopPoint {
+    position: absolute;
+    left: 56%;
+    top: 33%;
+
+    &Text {
+      display: block;
+      transform: translate(40%, 100%);
     }
+  }
+
+  &-BottomPoint {
+    position: absolute;
+    left: 47%;
+    bottom: 28%;
+
+    &Text {
+      display: block;
+      transform: translate(-80%, -20%);
+    }
+  }
+}
+
+.TherapySection {
+  background-image: url('/assets/therapy-bg.png');
+  color: var(--white-color);
+  position: relative;
+  &-Title {
+    font-size: 34px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-40%, -50%);
+  }
+}
+
+.SchemesSection {
+  background-image: url('/assets/schemes-bg.png');
+
+  &-Title {
+    color: white;
+    font-size: 30px;
+  }
+
+  &-Gallery {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
 }

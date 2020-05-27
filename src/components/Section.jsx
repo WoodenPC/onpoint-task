@@ -3,9 +3,9 @@ import { cn } from '@bem-react/classname';
 
 const classes = cn('Section');
 
-const Section = React.memo(({ type, children }) => {
+const Section = React.memo(({ classMix = '', children }) => {
   return (
-    <section className={classes({ type })}>
+    <section className={`${classes()} ${classMix}`}>
       {children}
     </section>
   );

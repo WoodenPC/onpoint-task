@@ -3,14 +3,22 @@ import { cn } from '@bem-react/classname';
 
 const classes = cn('Navigation');
 
-const Navigation = React.memo(({ itemsCount = 0, selectedIndex = 0, classMix = '' }) => {
-  const items = useMemo(() => Array(itemsCount).fill(false), [itemsCount]);
-  console.log(items);
+const Navigation = React.memo(({ count = 0, selectedIndex = 0, classMix = '' }) => {
+  const items = useMemo(() => {
+    const result = [];
+    for (let i = 0; i < count; i++) {
+      result.push(
+        <div
+          key={i}
+          className={classes('Item', { selected: i === selectedIndex })}
+        />
+      );
+    }
+    return result;
+  }, [count, selectedIndex]);
   return (
     <nav className={`${classes()} ${classMix}`}>
-      {items.forEach((_, idx) => (
-        <div key={idx} className={classes('Item', { selected: idx === selectedIndex })}></div>
-      ))}
+      {items}
     </nav>
   );
 });

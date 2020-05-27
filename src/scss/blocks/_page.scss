@@ -10,4 +10,10 @@
     right: 54px;
     transform: translate(-50%, -50%);
   }
+
+  &-Next {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
 }
