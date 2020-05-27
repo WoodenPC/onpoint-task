@@ -3,7 +3,7 @@
   height: 100vh;
   padding: 20px;
   scroll-snap-align: start;
-  background-repeat: round;
+  background-repeat: no-repeat;
   position: relative;
 }
 
@@ -18,8 +18,8 @@
 
   &-LeftPoint {
     position: absolute;
-    left: 27%;
-    top: 53%;
+    left: 27.5%;
+    top: 54%;
 
     &Text {
       display: block;
@@ -29,8 +29,8 @@
 
   &-RightPoint {
     position: absolute;
-    right: 11.5%;
-    top: 64%;
+    right: 13%;
+    top: 66%;
 
     &Text {
       display: block;
@@ -41,7 +41,7 @@
   &-TopPoint {
     position: absolute;
     left: 56%;
-    top: 33%;
+    top: 34%;
 
     &Text {
       display: block;

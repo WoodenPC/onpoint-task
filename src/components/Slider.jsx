@@ -3,9 +3,9 @@ import { cn } from '@bem-react/classname';
 
 const classes = cn('Slider');
 
-const Slider = React.memo(({ values = [], min = 0, max = 1, step = 1, value = 0, onChange }) => {
+const Slider = React.memo(({ values = [], min = 0, max = 1, step = 1, value = 0, onChange, classMix = '' }) => {
   return (
-    <div className={classes()}>
+    <div className={`${classes()} ${classMix}`}>
       <input
         min={min}
         step={step}
