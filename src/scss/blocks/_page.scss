@@ -4,6 +4,10 @@
   overflow: scroll;
   scroll-snap-type: y mandatory;
 
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   &-Navigation {
     position: fixed;
     top: 50%;
