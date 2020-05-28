@@ -22,7 +22,7 @@ const Slider = React.memo(({ values = [], min = 0, max = 1, step = 1, value = 0,
       />
       <div className={classes('Ticks')}>
         {values.map((val) => (
-          <span>{val}</span>
+          <span key={val}>{val}</span>
         ))}
       </div>
     </div>
