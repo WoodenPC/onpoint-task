@@ -69,7 +69,7 @@ class App extends React.Component {
           selectedIndex={curSectionIndex}
           classMix={classes('Navigation')}
         />
-        <Next classMix={classes('Next')} visible={curSectionIndex !== 2} />
+        <Next classMix={classes('Next')} visible={curSectionIndex === 0} />
       </div>
     );
   }

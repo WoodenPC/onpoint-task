@@ -11,7 +11,10 @@
   background-image: url('/assets/start-bg.png');
   color: var(--blue-color);
   &-Title {
-    font-size: 34px;
+    line-height: 1.2;
+    text-align: left;
+    font-size: 47px;
+    width: 600px;
     margin-top: 100px;
     margin-left: 40px;
   }
@@ -29,7 +32,7 @@
 
   &-RightPoint {
     position: absolute;
-    right: 13%;
+    right: 12%;
     top: 66%;
 
     &Text {
@@ -66,11 +69,13 @@
   color: var(--white-color);
   position: relative;
   &-Title {
-    font-size: 34px;
+    font-size: 47px;
     position: absolute;
+    line-height: 1.2;
+    text-align: center;
     left: 50%;
     top: 40%;
-    transform: translate(-40%, -50%);
+    transform: translate(-50%, -40%);
   }
 }
 
@@ -79,7 +84,12 @@
 
   &-Title {
     color: white;
-    font-size: 30px;
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: left;
+    position: absolute;
+    // костыль
+    transform: translate(-20px, -30px);
   }
 
   &-Gallery {

@@ -4,14 +4,6 @@ import { Slider } from './Slider';
 
 const classes = cn('Gallery');
 
-const images = [
-  '/assets/tab-1.png',
-  '/assets/tab-2.png',
-  '/assets/tab-3.png'
-];
-
-const years = [1988, 2009, 2016];
-
 class Gallery extends React.PureComponent {
   state = {
     activeIndex: 2,
@@ -23,30 +15,37 @@ class Gallery extends React.PureComponent {
   }
 
   render() {
-    const { activeIndex } = this.state
-    const { classMix = '' } = this.props;
+    const { activeIndex } = this.state;
+    const { classMix = '', items = [], titleClass = '' } = this.props;
+    const values = items.map((item) => item.value);
     return (
       <div className={`${classes()} ${classMix}`}>
+        <h2 className={titleClass}>{items[activeIndex].title}</h2>
         <div className={classes('ImageBox')}>
           <div className={classes('ImageWrapper')} style={{
-            transform: `translateX(${activeIndex * -100 / images.length}%)`
+            transform: `translateX(${activeIndex * -100 / items.length}%)`
           }}>
-            {images.map((url, idx) => (
-              <div
-                key={idx}
-                src={url}
-                className={classes('Item')}
-                style={{
-                  backgroundImage: `url(${url})`
-                }}
-              />
-            ))}
+            {items.map((item, idx) => {
+              const style = item.style || {};
+              return (
+                <div
+                  key={idx}
+                  src={item.image}
+                  className={classes('Item')}
+                  style={{
+                    backgroundImage: `url(${item.image})`,
+                    ...style
+                  }}
+                />
+              )
+            }
+            )}
           </div>
         </div>
         <Slider
-          values={years}
+          values={values}
           min={0}
-          max={years.length - 1}
+          max={items.length - 1}
           step={1}
           value={activeIndex}
           onChange={this.onChange}
