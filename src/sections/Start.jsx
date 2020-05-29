@@ -6,7 +6,7 @@ import { Pulse } from '../components/Pulse';
 
 const classes = cn('StartSection');
 
-class StartSection extends React.Component {
+class StartSection extends React.PureComponent {
   render() {
     return (
       <Section classMix={classes()}>

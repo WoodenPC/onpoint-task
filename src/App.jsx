@@ -14,7 +14,6 @@ class App extends React.Component {
     curSectionIndex: 0
   }
   lastScroll = 0;
-  pageRef = React.createRef();
 
   componentDidMount() {
     const sections = document.querySelectorAll('.Section');
@@ -31,12 +30,8 @@ class App extends React.Component {
       this.observer.observe(section);
     });
 
-    this.pageRef.current.addEventListener('scroll', this.onScroll);
   }
 
-  componentWillUnmount() {
-    this.pageRef.current.removeEventListener('scroll', this.onScroll);
-  }
 
   onScroll = (entries, observer) => {
     if (!entries || !Array.isArray(entries)) {
@@ -60,7 +55,7 @@ class App extends React.Component {
   render() {
     const { curSectionIndex } = this.state;
     return (
-      <div className={classes()} ref={this.pageRef}>
+      <div className={classes()}>
         <StartSection />
         <TherapySection />
         <SchemesSection />

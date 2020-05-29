@@ -12,7 +12,7 @@ const years = [
   { title: 'Звенья патогенеза СД2', value: 2016, image: '/assets/tab-3.png' }
 ];
 
-class SchemesSection extends React.Component {
+class SchemesSection extends React.PureComponent {
   render() {
     return (
       <Section classMix={classes()}>

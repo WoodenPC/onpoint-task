@@ -5,7 +5,7 @@ import { Section } from '../components/Section';
 
 const classes = cn('TherapySection');
 
-class TherapySection extends React.Component {
+class TherapySection extends React.PureComponent {
   render() {
     return (
       <Section classMix={classes()}>

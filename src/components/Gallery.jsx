@@ -44,9 +44,6 @@ class Gallery extends React.PureComponent {
         </div>
         <Slider
           values={values}
-          min={0}
-          max={items.length - 1}
-          step={1}
           value={activeIndex}
           onChange={this.onChange}
           classMix={classes('Slider')}

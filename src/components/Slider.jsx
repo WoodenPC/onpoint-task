@@ -3,7 +3,7 @@ import { cn } from '@bem-react/classname';
 
 const classes = cn('Slider');
 
-const Slider = React.memo(({ values = [], min = 0, max = 1, step = 1, value = 0, onChange, classMix = '' }) => {
+const Slider = React.memo(({ values = [], value = 0, onChange, classMix = '' }) => {
   const [innerVal, setInnerVal] = useState(Math.round(value / (values.length - 1) * 100));
   const handleChange = useCallback((e) => {
     const { value } = e.target;
